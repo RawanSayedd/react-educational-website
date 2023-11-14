@@ -1,38 +1,147 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Outfit:wght@400;500;700;800&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f8f8;
+}
+.container {
+  max-width: 85%;
+  margin: auto;
+}
+.flexSB {
+  display: flex;
+  justify-content: space-between;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.3);
+  color: #1eb2a6;
+  transition: 0.5s ease;
+}
+.icon:hover {
+  cursor: pointer;
+  background-color: #1eb2a6;
+  color: #fff;
+  transform: scale(1.05);
+}
+button {
+  border: none;
+  padding: 17px 30px;
+  background-color: #fff;
+  color: #1eb2a6;
+  font-weight: 600;
+  margin: 30px 10px 0 0;
+  cursor: pointer;
+  box-shadow: 0 24px 36px -11px rgba(0 0 0/9%);
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+button i {
+  margin-left: 20px;
+}
+button:hover {
+  box-shadow: none;
+  transform: scale(1.04);
+}
+.primary-btn {
+  background-color: #1eb2a6;
+  color: #fff;
+}
+.row {
+  width: 50%;
+}
+#headings {
+  text-align: center;
+  padding: 40px 0;
+}
+.back {
+  background-image: url("../public/images/back.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  padding-top: 20%;
+  color: #fff;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.back h1 {
+  font-size: 100px;
+  font-weight: 400;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.back h2 {
+  font-weight: 500;
+  font-size: 17px;
+  text-transform: uppercase;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.margin {
+  margin-top: 40.3%;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+.padding {
+  padding: 100px 0;
+}
+.shadow {
+  box-shadow: 0 5px 25px -2px rgba(0 0 0 / 6%);
+  background-color: #fff;
+}
+.flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.outline-btn {
+  width: 100%;
+  outline: 2px solid #1eb2a6;
+  font-size: 16px;
+  font-weight: 500;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.outline-btn:hover {
+  color: #fff;
+  background-color: #1eb2a6;
+}
+@media screen and (max-width: 768px) {
+  html {
+    overflow-x: hidden;
   }
-  to {
-    transform: rotate(360deg);
+  .grid2,
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .grid3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .back {
+    background-position: center;
+    padding-top: 50%;
+    height: 80vh;
+  }
+  .margin {
+    margin-top: 20%;
   }
 }
